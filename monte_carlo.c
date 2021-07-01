@@ -1,17 +1,37 @@
-float mc_pi(int n ){
-   int incircle = 0;
-   
-  for ( int i=0; i<n ;i++ ){
-  float x = frandom();
-  float y= frandom();
-  float  d= x*x + y*y;
-  if ( d <= 1 ){
-   incircle++;
-   }
-  }
-  float pi = 4*(float)incircle/n;
-   return pi;   
+float mc_pi(int n){
+  float x,y;
+  int i=0,circle=0;
+  float z;
+  int square=0;
   
-  }
+  float pi;
+  
+  while (i<n-1){
+   
+   x=frandom();
+   y=frandom();
+   z=x*x+y*y;
+  
+   
+   if(z<=1){
+     circle+=1;
+     square+=1;
+     }
+   else{
+     square+=1;
+   
+   i++;
+     
+   }
+   
+   }
+ 
+ pi=(float)4*circle/square;
+ return pi;
+   
+    
+  
+  
+}
 
 
