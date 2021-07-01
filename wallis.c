@@ -35,5 +35,5 @@ float wallis_pi(int n)
  }
  return product;
 }
-© 2021
+
 
